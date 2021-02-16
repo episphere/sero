@@ -2,7 +2,7 @@ console.log('sero.js loaded');
 
 sero={
     date:new Date(),
-    update:100000,
+    update:24*60*60*1000,
     tracker:{},
     hub:{},
     cache:{}
