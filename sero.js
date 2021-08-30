@@ -15,7 +15,8 @@ sero.getScript =function(url){
     return s
 }
 
-sero.get=async(url='https://iit-backend.com/data_provider/records',p={})=>{
+//sero.get=async(url='https://covid19serohub.nih.gov/api/v1/seroprevalence_totals',p={})=>{
+sero.get=async(url='https://script.google.com/macros/s/AKfycbxVeQPo7R_BHqb2QI2ilKiEgje57hAg94YgVCpA9QA15ZzVgSxDd52FClsKyatwt3xblw/exec',p={})=>{    
     let res =[]
     if(typeof(localforage)!="undefined"){
         let resDate = await localforage.getItem(`${url}_date`)
@@ -37,7 +38,7 @@ sero.get=async(url='https://iit-backend.com/data_provider/records',p={})=>{
 }
 
 sero.tracker.records=async(_)=>{
-    return await sero.get('https://iit-backend.com/data_provider/records')
+    return await sero.get('https://script.google.com/macros/s/AKfycbxVeQPo7R_BHqb2QI2ilKiEgje57hAg94YgVCpA9QA15ZzVgSxDd52FClsKyatwt3xblw/exec')
 }
 
 sero.tracker.queryBy=async(group="country")=>{
